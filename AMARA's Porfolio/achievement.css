@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+
+/* Global variables */
+:root {
+  --primary: #12bdff;
+  --primary-hover: #0c8ec2;
+  --dark-primary: #1b1f24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "projects"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    padding-top: 80px;
+    margin: 0;
+    padding: 20px;
+    background-color: #031f3c;
+    text-align: center;
+}
+/* =============================================================================== */
+/* Header */
+header {
+  grid-area: nav;
+  top: -80px;
+  left: 0;
+  right: 0;
+  background-clip: border-box;
+  background-color: #091522;
+  background-position: right center;
+  padding: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+header h1 {
+  color: #00bcd4;
+  margin-right: 130px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 28pt;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 5px solid #d1d1d1;
+  animation: typewriter 4s steps(9) infinite alternate, blink 800ms steps(9) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: rgb(121, 104, 104);
+  }
+  to {
+    border-color: transparent;
+  } 
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+header ul li {
+  margin-right: 30px;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease 0s;
+}
+
+header ul li a:hover,
+header ul li a:focus {
+  color: #4cbaed;
+  transition: all 0.3s ease 0s;
+  transform: scale(1.1);
+  text-shadow: 0 0 8px rgba(70, 117, 217, 0.7); 
+}
+
+.achievements {
+    padding: 20px;
+    text-align: center;
+    background-color: #1e3a5f; 
+    border-radius: 8px;
+    margin: 20px;
+    max-width: 1200px;
+    border-radius: 15px;
+    border: 2px solid #eaeded;
+  }
+  
+.achievements h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #00bcd4;
+    border-bottom: 3px solid #00bcd4;
+    padding-bottom: 10px;
+    box-sizing: content-box;
+    justify-content: center;
+}
+  
+.hero-section__img {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+  
+.hero-img {
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+  
+.achievements h4 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #041e49;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+  
+.achievements h4 span {
+    font-size: 26px;
+    margin: 10px 0;
+    color: #e2e2e2;
+    color: red;
+}
+  
+.achievements p {
+    font-size: 18px;
+    color: #d1d1d1;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+  
+.achievements p a strong{
+    color: #1e6fe9; 
+    font-size: larger;
+    font-weight: 2.2rem;
+}
+  
+.achievements a:hover {
+    text-decoration: underline;
+    color: #031f3c; 
+}
+  
+  /* Style for the "Date of Achievement" */
+.achievements p strong {
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+footer {
+    grid-area: footer;;
+    background-color: #091522; 
+    color: gray; 
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+    
+footer p {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--primary);  
+}
+    
+footer a {
+    color: #66a3ff; 
+    text-decoration: none;;
+    transition: color 0.3s ease;
+}
+    
+footer a:hover {
+    color: #fff; 
+}
+    
+footer a :focus {
+    color: #fff;   
+}
+    
+.social-links {
+    margin: 20px 0;
+    animation: alternate;
+}
+    
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin: 10px;
+    color: #66a3ff;
+    text-decoration: none;
+}
+    
+.social-links{
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .hero-section__title {
+      font: 36px;
+    }
+    
+    .hero-section__desc {
+      font: 16px;
+    }
+}
+
+@media print {
+   
+    header, footer, .social-links, .achievements h2, .hero-img {
+      display: none;
+    }
+  
+    body {
+      padding: 10px;
+      background-color: #fff;
+      color: #000;
+      font-size: 12pt;
+    }
+  
+    .achievements p {
+      font-size: 14pt;
+    }
+  
+    .achievements {
+      border: none;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+  
+    .achievements a {
+      text-decoration: none;
+      color: #000;
+    }
+  
+    .achievements h2 {
+      font-size: 20pt;
+      color: #000;
+      border-bottom: 2px solid #000;
+    }
+    
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+}
+  
